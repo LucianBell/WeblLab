@@ -1,0 +1,96 @@
+body {
+    --preto: #1f192f;
+    --azul-marinho: #2d6073;
+    --azul: #00a8c7;
+    margin: 0;
+    background-color: #f1f0ee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    background-color: var(--preto);
+    color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    transition: all;
+    transition-duration: 80ms;
+}
+
+.nav-link:hover {
+    color: var(--azul);
+    border-bottom: 3px solid var(--azul);
+}
+
+.navbar-brand, .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.form-control {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.banner {
+    background-image: url(../img/bgum.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 50px;
+    font-weight: 900;
+
+}
+
+.container-eventos {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px  30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin: 20px auto;
+    width: 30%;
+}
+
+.card {
+    background: transparent;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.img-evento {
+    height: 300px;
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+footer {
+    background-color: var(--preto);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

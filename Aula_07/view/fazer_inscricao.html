@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/fazer_inscricao.css">
+    <title>Realizar Inscrição</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="home.html">Upf Eventos</a>
+            <div class="navbar-links">
+                <a class="nav-link" href="home.html">Início</a>
+                <a class="nav-link" href="cadastrar_evento.html">Eventos</a>
+                <a class="nav-link" href="fazer_inscricao.html">Inscrições</a>
+            </div>
+            <!-- <form class="search-form" role="search">
+                <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Search">
+                <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+            </form> -->
+        </nav>
+    </header>
+    <div class="container">
+        <div class="card-header" id="container_titulo">
+            <h1>Realizar Inscrição</h1>
+        </div>
+        <form action="" method="POST" name="formulario_inscricao" id="formulario_inscricao">
+            <div class="row">
+                <div class="">
+                    <label for="cpf" class="form-label">CPF</label>
+                    <input value="123.456.789-10" type="text" class="form-control" name="cpf" id="cpf" disabled>
+                </div>
+                <div class="">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input value="Fulano de Tal" type="text" class="form-control" name="nome" id="nome" disabled>
+                </div>
+                <div class="">
+                    <label for="select_evento" class="form-label">Selecione o evento</label>
+                    <select class="form-control" name="select_evento" id="select_evento" required>
+                        <option value="" disabled selected>Selecione</option>
+                        <option value="1">Evento 01</option>
+                        <option value="2">Evento 02</option>
+                        <option value="3">Evento 03</option>
+                        <option value="4">Evento 04</option>
+                        <option value="5">Evento 05</option>
+                    </select>
+                </div>
+                <div class="">
+                    <button class="btn btn-danger" id="btn_cancelar">Cancelar</button>
+                    <button type="submit" class="btn btn-success" id="btn_envia_formulario_inscricao">Fazer Inscrição</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

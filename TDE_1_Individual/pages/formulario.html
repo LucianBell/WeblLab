@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/formulario.css">
+    <title>Sobre - Juntos Contra o Câncer Juvenil</title>
+</head>
+<body>
+    <header>
+        <div class="header-elements-left">
+            <img src="../images/element-white.svg" class="element-img" alt="">
+            <img src="../images/element-white.svg" class="element-img" alt="">
+        </div>
+
+        <nav class="header-nav">
+            <a href="../index.html">
+                <div class="header-nav-fdiv">
+                    <img src="../images/project-logo.svg" class="element-img-logo" alt="">
+                </div>
+            </a>
+
+            <div class="header-nav-div">
+                <a href="../index.html" class="header-nav-btns">Principal</a>
+                <a href="../pages/formulario.html" class="header-nav-btns nav-btn-atual">Formulário</a>
+                <a href="../pages/sobre.html" class="header-nav-btns">Sobre</a>
+                <a href="../pages/contato.html" class="header-nav-btns">Contato</a>
+            </div>
+        </nav>
+        
+        <div class="header-elements-right">
+            <img src="../images/element-white.svg" class="element-img" alt="">
+            <img src="../images/element-white.svg" class="element-img" alt="">
+        </div>
+    </header>
+    
+    <section class="section-principal">
+    <h1>Formulário de Informações sobre o Câncer Juvenil</h1>
+    
+    <form action="sucesso.html">
+        <fieldset>
+        <legend>Informações de Contato</legend>
+
+        <label for="nome">Nome *:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+    
+        <label for="email">Email *:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="idade">Telefone p/ contato *:</label><br>
+        <input type="text" id="telefone" name="idade" required><br><br>
+    
+        <label for="idade">Idade *:</label><br>
+        <input type="number" id="idade" name="idade" required><br><br>
+        </fieldset>
+
+        <fieldset>
+        <legend>Informações dos Sintomas</legend>
+        <label for="sintomas">Sintomas (separe por vírgula) *:</label><br>
+        <textarea id="sintomas" name="sintomas" rows="4" cols="50" required></textarea><br><br>
+    
+        <label for="frequencia">Frequência dos Sintomas *:</label><br>
+        <select name="modalidade" size="1" required>
+            <option value="N" selected disabled>Selecione uma opção</option>
+            <option value="Leve">Leve (ocasionalmente)</option>
+            <option value="Moderada">Moderada (regularmente)</option>
+            <option value="Severa">Severa (frequentemente)</option>
+            <option value="Variável">Variável (varia ao longo do tempo)</option>
+        </select>
+        <br><br>
+    
+        <label for="doenca_preexistente-bool">Possui Doença Pré-existente?</label><br>
+        <input type="checkbox" id="sim" name="sim">
+        <label for="">Sim</label>
+
+        <input type="checkbox" id="nao" name="nao">
+        <label for="">Não</label>
+        <br>
+
+        <label for="doenca_preexistente-espec">Se sim, especifique a doença pré-existente:</label><br>
+        <input type="text" id="doenca_preexistente" name="doenca_preexistente"><br><br>
+        
+        <label for="sindrome">Síndrome (se aplicável):</label><br>
+        <input type="text" id="sindrome" name="sindrome"><br><br>
+        </fieldset>
+
+        <input type="submit" value="Enviar">
+    </form>
+    </section>
+
+</body>
+</html>

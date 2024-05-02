@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+</head>
+<body>
+    <h2>Contact form!</h2>
+    <form action="./pages/congratulations.html" method="post">
+        <P>To get in contact with the <b>UPF Library</b> fill the following data form:</P>
+        
+        <label for=""><strong>Name:</strong></label>
+        <input type="text" name="name" id="" placeholder="Jhon Dough" required>
+        <br>
+
+        <label for=""><strong>Email:</strong></label>
+        <input type="text" name="email" id="" placeholder="jhondough@gmail.com" required>
+        <br>
+
+        <label for=""><strong>Phone:</strong></label>
+        <input type="text" name="phone" pattern="\(\d{2}\)\d{5}-\d{4}" id="" placeholder="(55) 99999-9999" required>
+        <br>
+        <br>
+
+        <label for=""><strong>Subject:</strong></label>
+        <br>
+        <textarea name="subject" placeholder="Your subject" rows="6" cols="27"></textarea>
+        <br>
+        <br>
+
+        <button type="submit">Send</button>
+        <button type="reset">Clear</button>
+    </form>
+</body>
+</html>

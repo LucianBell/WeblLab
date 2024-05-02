@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Dados</title>
+</head>
+<body>
+    <div>
+        <h2>Congratulations</h2>
+        <h1 style="margin-bottom: 20px; margin-top: -20px;">You're Approved!</h1>
+        <p><b>To accept our job offer you just need to awnser our form!</b></p>
+    </div>
+
+    <div>
+        <form id="employeeForm" action="#" method="post">
+            <label for="fName">First name:</label>
+            <input type="text" placeholder="Your first name" name="Employee-First-Name" required>
+
+            <label for="lName">Last name:</label>
+            <input type="text" placeholder="Your last name" name="Employee-Last-Name" required>
+
+            <label for="employeeEmail">Your email:</label>
+            <input type="text" placeholder="Your last name" name="Employee-Email" required>
+
+            <label for="employeePass">Your password:</label>
+            <input type="password" placeholder="Your password" name="Employee-Password" size="10">
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("employeeForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Extract form data
+            const formData = new FormData(event.target);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            // Convert data to JSON
+            const jsonData = JSON.stringify(data, null, 2);
+
+            // Create Blob with JSON data
+            const blob = new Blob([jsonData], { type: "application/json" });
+
+            // Save the Blob as a file
+            const fileName = "employee-info.json";
+            const link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = fileName;
+            link.style.display = "none";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
+</body>
+</html>

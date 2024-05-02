@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Form</title>
+</head>
+<body>
+    <div>
+        <h2>Congratulations</h2>
+        <h1 style="margin-bottom: 20px; margin-top: -20px;">You're Approved!</h1>
+        <p><b>To accept our job offer you just need to awnser our form!</b></p>
+    </div>
+
+    <div>
+        <form id="employeeForm" action="./pages/congratulations.html" method="post">
+            <label for="fName">Name:</label>
+            <input type="text" placeholder="Your name" name="Employee-First-Name" required>
+            <br>
+            <br>
+
+            <label for="employeeEmail">Your email:</label>
+            <input type="text" placeholder="Your last name" name="Employee-Email" required>
+            <br>
+            <br>
+
+            <label for="employeePass">Your password:</label>
+            <input type="password" placeholder="Your password" name="Employee-Password">
+            <br>
+            <br>
+
+            <label for="employeePass">Birthday</label>
+            <input type="date" name="Employee-Birthday" id="" required>
+            <br>
+            <br>
+            
+            <label for="employeeMajor">Your Major</label>
+            <select name="Employee-major" id="majors">
+                <option value="nl">---------------</option>
+                <option value="cs" selected>Computer Science</option>
+                <option value="eg">Engineering</option>
+            </select>
+            <br>
+            <br>
+
+            <label for="employeeClasses">Classes you're attending - Level ?</label>
+            <br>
+            <input type="checkbox" name="Employee-Level" id="" value="1"/>I
+            <input type="checkbox" name="Employee-Level" id="" value="2"/>II
+            <input type="checkbox" name="Employee-Level" id="" value="3"/>III
+            <input type="checkbox" name="Employee-Level" id="" value="4"/>IV
+            <input type="checkbox" name="Employee-Level" id="" value="5"/>V
+            <input type="checkbox" name="Employee-Level" id="" value="6"/>VI
+            <input type="checkbox" name="Employee-Level" id="" value="7"/>VII
+            <input type="checkbox" name="Employee-Level" id="" value="8"/>VIII
+            <br>
+            <br>
+
+            <label for="employeeBooks">Choose your bonus books (CTRL to choose multiple options):</label>
+            <br>
+            <br>
+            <select name="Employee-Books" multiple>
+                <option value="react">React - How to Creat Web Applications</option>
+                <option value="data-science">Data Science: From Zero to Hero</option>
+                <option value="html">HTML 5 - Complete Edition</option>
+                <option value="sql">SQL Absolute</option>
+                <option value="php">Php For Dummies</option>
+            </select>
+            <br>
+            <br>
+            <br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+
+    </body>
+</html>

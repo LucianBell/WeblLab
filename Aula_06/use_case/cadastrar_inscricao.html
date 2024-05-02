@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrições</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div>
+                <!--CÓDIGO-->
+            </div>
+        </nav>
+    </header>
+
+    <div>
+        <h1>Realizar Inscrição</h1>
+    </div>
+
+    <form action="" method="post" name="form_inscricao" id="form_inscricao">
+        <div>
+            <div>
+                <label class="">CPF</label>
+                <input type="text" name="cpf" id="" disabled placeholder="123.456.789-01">
+            </div>
+
+            <div>
+                <label class="">Nome</label>
+                <input type="text" name="nome" id="" placeholder="Fulano de Tal">
+            </div>
+            
+            <div>
+                <label class="">Selecione o evento:</label>
+                <select name="evento" name="select_evento" id="select_evento" required>
+                    <option value="" disabled selected>Selecione</option>
+                    <option value="1">Evento 01</option>
+                    <option value="2">Evento 02</option>
+                    <option value="3">Evento 03</option>
+                    <option value="4">Evento 04</option>
+                    <option value="5">Evento 05</option>
+                </select>
+            </div>
+        </div>
+    <hr>
+    <div>
+        <button type="reset" id="btn_cancelar">Limpar</button>
+        <button type="submit" id="btn_enviar">Fazer inscrição!</button>
+    </div>
+    </form>
+</body>
+</html>

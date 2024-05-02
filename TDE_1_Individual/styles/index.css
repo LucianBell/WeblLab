@@ -1,0 +1,216 @@
+header {
+    width: 100%;
+    display: flex;
+    background-color: #ffacb4;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header-elements-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.element-img-logo {
+    width: 30%;
+    margin: 10px;
+    margin-left: 15px;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #29688F;
+    min-width: 80%;
+    min-height: 60px;
+    max-height: 80px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header-nav-fdiv {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #fff;
+}
+
+.header-nav-div {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    justify-content: space-between;
+}
+
+.header-nav-btns {
+    margin-right: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: white;
+    transition-duration: 200ms;
+}
+
+.header-nav-btns:hover {
+    color: #ffacb4;
+}
+
+.nav-btn-atual {
+    color: #ffacb4;
+}
+
+.nav-btn-atual:hover {
+    color: white;
+}
+
+.header-elements-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.element-img {
+    width: 30%;
+}
+
+.section-principal {
+    margin-left: 11%;
+    padding-top: 30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 58px;
+    font-weight: 600;
+}
+
+.section-h2 {
+    font-size: 22px;
+    margin-top: 15px;
+    color: lightslategrey;
+}
+
+.principal-divtext {
+    margin-top: 30px;
+    width: 60%;
+}
+
+.principal-text {
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.btn-saiba {
+    font-size: 20px;
+    color: white;
+    background-color: #ffacb4;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    border: solid #ffacb4;
+    border-radius: 30px;
+    transition-duration: 200ms;
+}
+
+.btn-saiba:hover {
+    color: #ffacb4;
+    background-color: white;
+}
+
+.btn-ajuda {
+    font-size: 20px;
+    color: #ffacb4;
+    background-color: white;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-transform: uppercase;
+    border: solid #ffacb4;
+    border-radius: 30px;
+    transition-duration: 200ms;   
+}
+
+.btn-ajuda:hover {
+    color: white;
+    background-color: #ffacb4;
+}
+
+.principal-divdata {
+    padding: 30px;
+    padding-right: 18px;
+    width: 84%;
+    border-radius: 50px;
+    border: solid #29688F;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.data-element {
+    width: 10%;
+}
+
+.data-text {
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.section-final {
+    margin-bottom: 50px;
+}
+
+.principal-h3 {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.div-fatos {
+    width: 88%;
+    justify-content: space-between;
+    display: flex;
+}
+
+.fatos-div {
+    width: 450px;
+    text-align: center;
+    border: #29688F 2px solid;
+    border-radius: 10px;
+}
+
+.fatos-middle-div {
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+.fact-element {
+    width: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.fatos-text {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.element-sintomas {
+    margin-left: 20px;
+}
+
+.fatos-div-teste {
+    padding-right: 30px;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+li {
+    margin-bottom: 3px;
+}

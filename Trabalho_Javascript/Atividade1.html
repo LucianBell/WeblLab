@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Média de Notas</title>
+</head>
+<body>
+    <script>
+        function calcularMedia() {
+            let nome = prompt("Digite o nome do aluno:");
+
+            let numNotas = parseInt(prompt("Digite o número de notas que serão inseridas:"));
+            
+            if (isNaN(numNotas) || numNotas <= 0) {
+                alert("Número de notas inválido. Por favor, insira um número maior que 0.");
+                return;
+            }
+
+            let totalNotas = 0;
+            
+            for (let i = 1; i <= numNotas; i++) {
+                let nota = parseFloat(prompt(`Digite a nota ${i}:`));
+                
+                if (isNaN(nota) || nota < 0 || nota > 10) {
+                    alert("Nota inválida. Por favor, insira uma nota entre 0 e 10.");
+                    i--; 
+                } else {
+                    totalNotas += nota;
+                }
+            }
+
+            let media = totalNotas / numNotas;
+
+            alert(`A média das notas de ${nome} é: ${media.toFixed(2)}`);
+        }
+
+        calcularMedia();
+    </script>
+</body>
+</html>

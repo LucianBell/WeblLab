@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Adicionando essa linha podemos adicionar o jQuery ao HTML-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#new_task").click(function() {
+                var task_text = $("#insertion_camp").val()
+                $("#task_list").append('<li>' + task_text + ' ' + '<button style="width: 20px; height: 20px; border: solid 2px black; border-radius: 5px; background-color: white; cursor: pointer;"></button> </li>')
+                $("#insertion_camp").val('')
+            })
+        })
+    </script>
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista de tarefas</h1>
+
+    <ul id="task_list">
+    </ul>
+
+    <input type="text" id="insertion_camp">
+    <button id="new_task">Adicionar nova tarefa</button>
+</body>
+</html>

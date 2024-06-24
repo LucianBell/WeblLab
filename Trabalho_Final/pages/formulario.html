@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Using bootstrap for the form styling and the filling feedback-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/formulario.css">
+    <link rel="stylesheet" href="../styles//form_check.css">
+    <title>Formulário - Juntos Contra o Câncer Juvenil</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script rel="text/javascript" src="../scripts/form_check.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-elements-left">
+            <img src="../images/element-white.svg" class="element-img" alt="">
+            <img src="../images/element-white.svg" class="element-img" alt="">
+        </div>
+
+        <nav class="header-nav">
+            <a href="../index.html">
+                <div class="header-nav-fdiv">
+                    <img src="../images/project-logo.svg" class="element-img-logo" alt="">
+                </div>
+            </a>
+
+            <div class="header-nav-div">
+                <a href="../index.html" class="header-nav-btns">Principal</a>
+                <a href="../pages/formulario.html" class="header-nav-btns nav-btn-atual">Formulário</a>
+                <a href="../pages/sobre.html" class="header-nav-btns">Sobre</a>
+                <a href="../pages/contato.html" class="header-nav-btns">Contato</a>
+            </div>
+        </nav>
+        
+        <div class="header-elements-right">
+            <img src="../images/element-white.svg" class="element-img" alt="">
+            <img src="../images/element-white.svg" class="element-img" alt="">
+        </div>
+    </header>
+    
+    <section class="section-principal">
+    <h1>Formulário de Informações sobre o Câncer Juvenil</h1>
+    
+    <form action="" onSubmit="return validadeForm()">
+        <fieldset>
+        <legend>Informações de Contato</legend>
+        
+        <div class="div-flex">
+            <div class="form-group col-md-6 mb-3">
+                <label for="exampleInputPassword1">Nome Completo <span>*</span></label>
+                <input type="text" class="form-control" id="exampleInputName1">
+                
+                <div class="null-class" id="fdk-name">
+                </div>
+            </div>
+
+            <div class="form-group col-md-6 mb-3">
+              <label for="exampleFormControlInput1">Endereço de Email <span>*</span></label>
+              <input type="email" class="form-control" id="exampleFormControlEmail1" placeholder="name@example.com">
+              
+              <div class="null-class" id="fdk-email">
+              </div>
+
+            </div>
+        </div>
+
+        <div class="div-flex">
+            <div class="form-group col-md-6 mb-3">
+                <label for="validationCustom05">Idade <span>*</span>:</label>
+                <input type="text" class="form-control" id="exampleFormIdade">
+                
+                <div class="null-class" id="fdk-idade">
+                </div>
+            </div>
+            
+            <div class="form-group col-md-6 mb-3">
+                <label class="form-label" for="typePhone">Telefone p/ contato *:</label>
+                <input type="tel" id="exampleFormPhone" class="form-control" />    
+                
+                
+                <div class="null-class" id="fdk-phone">
+                </div>
+            </div>
+        </div>
+        
+        </fieldset>
+
+        <fieldset>
+        <legend>Informações dos Sintomas</legend>
+
+        <div class="div-flex">
+            <div class="ui-widget col-md-6 mb-3">
+                <label for="tags">Sintomas (separe por vírgula) *</label><br>
+                <input id="sintomas" name="sintomas" size="50" class="form-control">
+                <div class="null-class" id="fdk-sintomas">
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="frequencia">Frequência dos Sintomas *:</label><br>
+
+                <select class="form-control" name="modalidade" id="freqSintomas" required>
+                    <option value="N" selected disabled>Selecione uma opção</option>
+                    <option value="Leve">Leve (ocasionalmente)</option>
+                    <option value="Moderada">Moderada (regularmente)</option>
+                    <option value="Severa">Severa (frequentemente)</option>
+                    <option value="Variável">Variável (varia ao longo do tempo)</option>
+                </select>
+
+                <div class="null-class" id="fdk-freqSintomas">
+                </div>
+        </div>
+
+        </div>
+    
+        <div class="div-flex">
+            <div class="ui-widget col-md-6 mb-3">
+                <label for="doenca_preexistente-bool">Possui Doença Pré-existente?</label><br>
+
+                <input type="radio" id="sim_btn" name="existe_doenca" style="margin-top: 10px;">
+                <label for="">Sim</label>
+
+                <input type="radio" id="nao_btn" name="existe_doenca">
+                <label for="">Não</label>
+            </div>
+
+            <div class="col-md-6 mb-3" id="doencas-prexist" style="display: none; margin-top: -10px;">
+                <label for="doenca_preexistente-espec">Especifique a doença pré-existente:</label><br>
+                <input name="doencas-prexist" size="50" id="input_doencas_prexist" class="form-control"><br>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <h3>Seu resultado preliminar:</h3>
+
+            <div class=" div-flex">
+                <p id="biririPoints">0</p>
+                
+                <div>
+                    <h3 class=" h3text">Indicação:</h3>
+                    <p id="biririIndicacao">Continue preenchendo os dados :D</p>
+                </div>
+            </div>
+        </div>
+        </fieldset>
+
+        <input type="submit" id="formSubmitBtn" value="Enviar">
+    </form>
+    </section>
+
+</body>
+</html>

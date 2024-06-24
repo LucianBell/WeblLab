@@ -125,6 +125,21 @@ input[type=submit]:hover {
     color: white;
 }
 
+#biririPoints {
+    margin-right: 10px;
+    padding: 16px;
+    text-align: center;
+    font-size: 32px;
+    border: #000 2px solid;
+    border-radius: 20px;
+    color: #000;
+}
+
+.h3text {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
 @media (max-width: 950px) {
     .element-img-logo {
         width: 35px;

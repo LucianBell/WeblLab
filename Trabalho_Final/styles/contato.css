@@ -82,63 +82,29 @@ a {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 58px;
     font-weight: 600;
 }
 
-form {
-    width: 88%;
+.section-h2 {
+    font-size: 22px;
+    margin-top: 15px;
+    color: lightslategrey;
 }
 
-fieldset {
-    border: #29688F solid 2px;
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 20px;
+.principal-divtext {
+    margin-top: 30px;
+    width: 85%;
+    display: flex;
 }
 
-legend {
-    font-size: 20px;
+h3 {
+    font-size: 26px;
+    margin-left: 30px;
 }
 
-input[type=checkbox] {
-    margin-top: 10px;
-    margin-bottom: 20px;
+.principal-text {
+    font-size: 18px;
+    margin-bottom: 35px;
 }
 
-input[type=submit] {
-    font-size: 16px;
-    border-radius: 10px;
-    border: #ffacb4 2px solid;
-    background-color: white;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-}
-
-input[type=submit]:hover {
-    cursor: pointer;
-    background-color: #ffacb4;
-    color: white;
-}
-
-@media (max-width: 950px) {
-    .element-img-logo {
-        width: 35px;
-    }
-
-    .header-nav-btns {
-        font-size: 16px;
-    }
-
-    h1 {
-        font-size: 40px;
-    }
-
-    .section-principal {
-        width: 75%;
-    }
-}

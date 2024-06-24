@@ -1,0 +1,32 @@
+.div-flex {
+    display: flex;
+    margin-top: 15px;
+}
+
+.null-class {
+    display: none;
+}
+
+.okay-fdk {
+    display: block;
+    margin-top: 5px;
+    color: #4CE04F;
+}
+
+.okay-fdk::after {
+    content: "Tudo correto! ✅";
+}
+
+.fdk-form-okay {
+    border-color: #4CE04F;
+}
+
+.bad-fdk {
+    display: block;
+    margin-top: 5px;
+    color: red;
+}
+
+.bad-fdk::after {
+    content: "Ops! Resposta Inváldia ❌";
+}

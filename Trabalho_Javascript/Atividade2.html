@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Strings</title>
+</head>
+<body>
+    <script>
+        // Função principal para manipulação de strings
+        function manipularString() {
+            // Lê a string interativamente
+            let inputString = prompt("Digite uma string:");
+
+            // Tamanho da String em número de caracteres
+            let tamanhoString = inputString.length;
+            alert(`Tamanho da string: ${tamanhoString} caracteres`);
+
+            // Substring obtida a partir da String lida
+            let inicioSubstring = parseInt(prompt("Digite a posição inicial para a substring (0-based index):"));
+            let comprimentoSubstring = parseInt(prompt("Digite o comprimento da substring:"));
+            let substring = inputString.substring(inicioSubstring, inicioSubstring + comprimentoSubstring);
+            alert(`Substring: ${substring}`);
+
+            // Nova String com elementos substituídos
+            let charParaSubstituir = prompt("Digite o caractere que deseja substituir:");
+            let novoChar = prompt("Digite o novo caractere para substituição:");
+            let stringSubstituida = inputString.replace(new RegExp(charParaSubstituir, 'g'), novoChar);
+            alert(`String com substituição: ${stringSubstituida}`);
+
+            // Nova String convertida para maiúsculas e minúsculas
+            let stringMaiuscula = inputString.toUpperCase();
+            let stringMinuscula = inputString.toLowerCase();
+            alert(`String em maiúsculas: ${stringMaiuscula}`);
+            alert(`String em minúsculas: ${stringMinuscula}`);
+
+            // Nova String concatenada com caracteres lidos interativamente
+            let stringParaConcatenar = prompt("Digite uma string para concatenar:");
+            let stringConcatenada = inputString.concat(stringParaConcatenar);
+            alert(`String concatenada: ${stringConcatenada}`);
+
+            // Nova String com caracteres em branco removidos
+            let stringSemEspacos = inputString.trim();
+            alert(`String sem espaços em branco: "${stringSemEspacos}"`);
+
+            // Nova String preenchida no início e no final com caracteres lidos interativamente
+            let charInicio = prompt("Digite o caractere para preencher no início:");
+            let charFim = prompt("Digite o caractere para preencher no final:");
+            let stringPreenchida = charInicio + inputString + charFim;
+            alert(`String preenchida: ${stringPreenchida}`);
+
+            // O caractere que se encontra na posição x
+            let posicaoChar = parseInt(prompt("Digite a posição do caractere que deseja visualizar (0-based index):"));
+            let charNaPosicao = inputString.charAt(posicaoChar);
+            alert(`Caractere na posição ${posicaoChar}: ${charNaPosicao}`);
+
+            // O código unicode do caractere que se encontra na posição x
+            let unicodeCharNaPosicao = inputString.charCodeAt(posicaoChar);
+            alert(`Código Unicode do caractere na posição ${posicaoChar}: ${unicodeCharNaPosicao}`);
+        }
+
+        // Chama a função para iniciar o processo
+        manipularString();
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .form-container { margin: 20px; }
+        .result { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Calculadora de IMC</h1>
+        <form id="imcForm">
+            <label for="altura">Altura (em metros):</label><br>
+            <input type="number" id="altura" name="altura" step="0.01" required><br><br>
+            <label for="peso">Peso (em kg):</label><br>
+            <input type="number" id="peso" name="peso" step="0.1" required><br><br>
+            <button type="button" onclick="calcularIMC()">Calcular IMC</button>
+        </form>
+        <div class="result" id="imcResultado"></div>
+    </div>
+
+    <script>
+        function calcularIMC() {
+            const altura = parseFloat(document.getElementById('altura').value);
+            const peso = parseFloat(document.getElementById('peso').value);
+            const imcResultadoDiv = document.getElementById('imcResultado');
+
+            if (isNaN(altura) || isNaN(peso) || altura <= 0 || peso <= 0) {
+                imcResultadoDiv.textContent = "Por favor, insira valores válidos.";
+                return;
+            }
+
+            const imc = peso / (altura * altura);
+            let interpretacao;
+
+            if (imc < 18.5) {
+                interpretacao = "Abaixo do peso";
+            } else if (imc < 24.9) {
+                interpretacao = "Peso normal";
+            } else if (imc < 29.9) {
+                interpretacao = "Sobrepeso";
+            } else {
+                interpretacao = "Obesidade";
+            }
+
+            imcResultadoDiv.textContent = `Seu IMC é ${imc.toFixed(2)} (${interpretacao}).`;
+        }
+    </script>
+</body>
+</html>

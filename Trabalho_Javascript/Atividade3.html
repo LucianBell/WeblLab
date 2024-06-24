@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de Datas e Horários</title>
+</head>
+<body>
+    <script>
+        // Função para obter e formatar a data e a hora do navegador
+        function obterDataHoraFormatada() {
+            const diasDaSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+            const agora = new Date();
+
+            const diaSemana = diasDaSemana[agora.getDay()];
+            const dia = String(agora.getDate()).padStart(2, '0');
+            const mes = String(agora.getMonth() + 1).padStart(2, '0');
+            const ano = agora.getFullYear();
+            const horas = String(agora.getHours()).padStart(2, '0');
+            const minutos = String(agora.getMinutes()).padStart(2, '0');
+            const segundos = String(agora.getSeconds()).padStart(2, '0');
+
+            const dataFormatada = `${diaSemana} - ${dia}/${mes}/${ano} - ${horas}:${minutos}:${segundos}`;
+            alert(`Data e hora formatada: ${dataFormatada}`);
+        }
+
+        // Função para calcular a idade com base no ano de nascimento
+        function calcularIdade() {
+            const anoAtual = new Date().getFullYear();
+            const anoNascimento = parseInt(prompt("Digite seu ano de nascimento:"));
+
+            if (isNaN(anoNascimento) || anoNascimento > anoAtual || anoNascimento < 1900) {
+                alert("Ano de nascimento inválido. Por favor, insira um ano válido.");
+                return;
+            }
+
+            const idade = anoAtual - anoNascimento;
+            alert(`Sua idade é: ${idade} anos`);
+        }
+
+        // Chama as funções para exibir a data/hora e calcular a idade
+        obterDataHoraFormatada();
+        calcularIdade();
+    </script>
+</body>
+</html>

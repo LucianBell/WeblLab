@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Adicionando essa linha podemos adicionar o jQuery ao HTML-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!--Aqui podemos escrever nosso código jQuery-->
+    <script>
+    /* 
+    Seletores são muito importantes pois eles selecionam elementos
+    da página baseado no nome, classe ou id desses elementos.
+    */
+
+    /*
+    Essa função faz os elementos p serem escondidos quando a página
+    carregar :)
+    */
+    $(document).ready(function () {
+        $("p").hide()
+    
+        /*
+        Eventos são ações que a página toma quando o usuário realiza alguma
+        ação específica na página. Vamos exemplificar abaixo:
+        */
+
+        /*
+        A função abaixo faz com que, quando clicar no elemento botão, o p
+        identificado pelo id p_botao seja escondido. 
+        */
+        $("button").click(function () {
+            $("#p_botao").hide()
+        })
+    
+    })
+    </script>
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>Eu sou um header (o paragrafo está escondido hihi)</h1>
+    <p>Eu sou um paragrafo :D</p>
+
+    <button>Clica aí</button>
+    <p id="p_botao">Clica não aaaa ;-;</p>
+</body>
+</html>

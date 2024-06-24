@@ -1,0 +1,35 @@
+form {
+    width: 80%;
+}
+
+.div-flex {
+    display: flex;
+}
+
+.null-class {
+    display: none;
+}
+
+.okay-fdk {
+    display: block;
+    margin-top: 5px;
+    color: #4CE04F;
+}
+
+.okay-fdk::after {
+    content: "Looks good! ✅";
+}
+
+.fdk-form-okay {
+    border-color: #4CE04F;
+}
+
+.bad-fdk {
+    display: block;
+    margin-top: 5px;
+    color: red;
+}
+
+.bad-fdk::after {
+    content: "Invalid input ❌";
+}
